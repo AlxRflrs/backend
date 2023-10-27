@@ -19,11 +19,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('posts', function (Blueprint $table) {
-    $table->unsignedBigInteger('user_id');
+        Schema::table('carousel_item', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
  
-    $table->foreign('user_id')->references('id')->on('users');
-});
+            $table->foreign('user_id')->references('id')->on('users');
+        });
     }
 
     /**
